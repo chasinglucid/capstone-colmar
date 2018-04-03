@@ -37,7 +37,7 @@ h1 {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   h1 {
     margin-bottom: 2rem;
   }
@@ -69,13 +69,14 @@ header {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   header {
     justify-content: space-between;
   }
 }/* mobile */
 
 /* navigation */
+@media only screen and (min-width: 575px) {
 header nav {
   align-items: center;
   display: flex;
@@ -83,9 +84,10 @@ header nav {
   justify-content: flex-end;
   width: 100%;
 }
+}
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   header nav {
     justify-content: space-between;
     min-width: 100%;
@@ -103,7 +105,7 @@ header nav ul {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   header nav ul {
     justify-content: space-between;
     min-width: 100%;
@@ -115,14 +117,14 @@ header li.left {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   header nav ul li.left {
     margin:0;
   }
 } /* mobile */
 
 /* nav menu spacing in jeopardy; dump menu item css */
-@media only screen and (max-width: 673px) {
+@media only screen and (max-width: 884px) {
   li.lg-desktop-only {
     display: none;
   }
@@ -168,7 +170,7 @@ header a:hover span {
 
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   header nav ul li a:hover {
     background-color: #ffffff;
     color: inherit;
@@ -190,7 +192,7 @@ main {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   #banner {
     flex-direction: column;
     padding: 0;
@@ -205,7 +207,7 @@ main {
 }
 
 /* mobile specific css */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   #banner img {
     margin: 0;
     padding: 0;
@@ -221,7 +223,7 @@ main {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   #banner .content {
     margin: 2rem 1rem;
     max-width: 100%;
@@ -257,7 +259,7 @@ main {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   #school-info {
     flex-direction: column;
   }
@@ -317,7 +319,7 @@ article.lg-article address a:hover {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   .announcements {
     flex-basis: 100%;
     padding: 1rem;
@@ -340,7 +342,7 @@ article.lg-article address a:hover {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   .announcements article:last-child {
     background-color:  inherit;
   }
@@ -354,7 +356,7 @@ article.lg-article address a:hover {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   .announcements-img {
     padding: 0;
     width: 100%;
@@ -373,7 +375,7 @@ article.lg-article address a:hover {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   .announcements-content {
     flex-basis: 100%;
     padding: 0 1rem;
@@ -401,7 +403,7 @@ article.lg-article address a:hover {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   .announcements-content a {
     font-size: 0.9rem;
   }
@@ -415,7 +417,7 @@ article.lg-article address a:hover {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   #courses {
     background-color: inherit;
     padding: 2rem 1rem;
@@ -439,19 +441,20 @@ article.lg-article address a:hover {
   background-color: #ffffff;
   flex-basis: 30%;
   margin: 0 2rem 2rem 0;
+  height: 17.5rem;
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   .course-catalog {
     flex-flow: column nowrap;
   }
-
   .course {
     background-color: #eaebec;
     margin-bottom: 0.5rem;
     padding: 0;
     width: 100%;
+    height: 100%;
   }
   
   .course:hover {
@@ -466,15 +469,8 @@ article.lg-article address a:hover {
   max-width: 100%;
 }
 
-/* desktop */
-@media only screen and (min-width: 451px) {
-  .course:nth-child(n+4) {
-    margin-bottom: 0;
-  }
-} /*desktop */
-
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   .course:last-child {
     margin-bottom: 0;
   }
@@ -483,6 +479,15 @@ article.lg-article address a:hover {
 .course:nth-child(3n+3) {
   margin-right: 0;
 }
+
+/* desktop -- width issue causes bad spacing for boxes */
+@media only screen and (max-width: 800px) {
+  .course:nth-child(n+3),
+   .course:nth-child(n+4){
+    margin-bottom: 0.5;
+    margin-right: 2rem;
+  }
+} /*desktop */
 
 .course article {
   margin: 0 1rem 1.5rem 1rem;
@@ -493,7 +498,7 @@ article.lg-article address a:hover {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   .course h3 {
     margin-bottom: 0;
   }
@@ -553,7 +558,7 @@ article.lg-article address a:hover {
 }
 
 /* mobile */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   .thesis-container {
     margin: 1rem 0 1.5rem 0;
   }
@@ -664,7 +669,7 @@ footer span {
 }
 
 /* mobile*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 575px) {
   .desktop-only {
     display:none;
   }
